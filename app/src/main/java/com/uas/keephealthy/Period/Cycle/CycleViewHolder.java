@@ -1,0 +1,27 @@
+package com.uas.keephealthy.Period.Cycle;
+
+import android.view.View;
+import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.uas.keephealthy.Period.Model.Cycle;
+import com.uas.keephealthy.R;
+
+public class CycleViewHolder extends RecyclerView.ViewHolder{
+    private final TextView cycleRangeTV;
+    private final TextView totalDaysTV;
+
+    public CycleViewHolder(@NonNull View itemView) {
+        super(itemView);
+
+        this.cycleRangeTV = itemView.findViewById(R.id.cycleRangeTV);
+        this.totalDaysTV = itemView.findViewById(R.id.totalDaysTV);
+    }
+
+    public void bindThisData(Cycle cycleToBind) {
+        cycleRangeTV.setText(cycleToBind.getCycleRanges());
+        totalDaysTV.setText(cycleToBind.getTotalDays());
+    }
+}

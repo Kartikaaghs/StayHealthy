@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: androidx.emoji2:emoji2-views:1.2.0@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/85ee8f76abc63846a4cfe170711b7260/transformed/jetified-emoji2-views-1.2.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/85ee8f76abc63846a4cfe170711b7260/transformed/jetified-emoji2-views-1.2.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/85ee8f76abc63846a4cfe170711b7260/transformed/jetified-emoji2-views-1.2.0/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.emoji2/emoji2-views/1.2.0/fadf176830ca1352b3dc03f1523d4d0825531d83/emoji2-views-1.2.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

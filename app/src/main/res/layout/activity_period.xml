@@ -1,0 +1,525 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/purple_500"
+        android:elevation="4dp"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:layout_constraintBottom_toTopOf="@+id/periodContentSV"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <ScrollView
+        android:id="@+id/periodContentSV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/calendarTitleLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/previousBTN"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="previousMonthAction"
+                    android:text="@string/previous_button_string"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/monthYearBTN"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:onClick="showMonthYearPickerDialog"
+                    android:text="@string/month_year_string"
+                    android:textAlignment="center"
+                    android:textAllCaps="false" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/nextBTN"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="nextMonthAction"
+                    android:text="@string/next_button_string"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/daysOfWeekLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toTopOf="@id/calendarRV"
+                app:layout_constraintTop_toBottomOf="@id/calendarTitleLL">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/sunday_string"
+                    android:textAlignment="center"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/monday_string"
+                    android:textAlignment="center"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/tuesday_string"
+                    android:textAlignment="center"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/wednesday_string"
+                    android:textAlignment="center"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/thursday_string"
+                    android:textAlignment="center"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/friday_string"
+                    android:textAlignment="center"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/saturday_string"
+                    android:textAlignment="center"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/calendarRV"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                app:layout_constraintBottom_toTopOf="@id/dateTV"
+                app:layout_constraintTop_toBottomOf="@+id/daysOfWeekLL" />
+
+            <TextView
+                android:id="@+id/dateTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/horizontal_margin"
+                android:background="@color/gray"
+                android:text="@string/date_string"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toTopOf="@id/periodRangeCV"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/calendarRV" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/periodRangeCV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/vertical_margin"
+                android:clickable="false"
+                app:cardCornerRadius="4dp"
+                app:cardElevation="4dp"
+                app:layout_constraintBottom_toTopOf="@id/periodConditionRG"
+                app:layout_constraintTop_toBottomOf="@id/dateTV">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/periodDateTV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/horizontal_margin"
+                            android:text="@string/period_recent_string"
+                            android:textAppearance="?attr/textAppearanceHeadline6" />
+
+
+                        <TextView
+                            android:id="@+id/periodRangeDetailsTV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/horizontal_margin"
+                            android:text="@string/no_record_string"
+                            android:textAppearance="?attr/textAppearanceBody2" />
+
+                    </LinearLayout>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/addPeriodDateBTN"
+                        style="@style/Widget.MaterialComponents.Button.TextButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/add_period_string"
+                        android:onClick="addPeriodDate"
+                        app:icon="@drawable/ic_add_entry"
+                        app:iconGravity="textEnd"
+                        app:iconSize="20dp" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <RadioGroup
+                android:id="@+id/periodConditionRG"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/horizontal_margin"
+                android:layout_marginEnd="@dimen/horizontal_margin"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toTopOf="@id/periodFlowCV"
+                app:layout_constraintTop_toBottomOf="@id/periodRangeCV">
+
+                <RadioButton
+                    android:id="@+id/hadFlowRB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/had_flow_string" />
+
+                <RadioButton
+                    android:id="@+id/noFlowRB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/no_flow_string" />
+
+            </RadioGroup>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/periodFlowCV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/vertical_margin"
+                android:clickable="false"
+                app:cardCornerRadius="4dp"
+                app:cardElevation="4dp"
+                app:layout_constraintBottom_toTopOf="@id/periodSymptomsCV"
+                app:layout_constraintTop_toBottomOf="@id/periodConditionRG">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/periodFlowTV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/horizontal_margin"
+                            android:text="@string/flow_string"
+                            android:textAppearance="?attr/textAppearanceHeadline6" />
+
+                        <TextView
+                            android:id="@+id/periodFlowDetailsTV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/horizontal_margin"
+                            android:text="@string/no_record_string"
+                            android:textAppearance="?attr/textAppearanceBody2" />
+
+                    </LinearLayout>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/addPeriodFlowBTN"
+                        style="@style/Widget.MaterialComponents.Button.TextButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/add_flow_string"
+                        android:onClick="addFlowLevel"
+                        app:icon="@drawable/ic_add_entry"
+                        app:iconGravity="textEnd"
+                        app:iconSize="20dp" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/periodSymptomsCV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/vertical_margin"
+                android:clickable="false"
+                app:cardCornerRadius="4dp"
+                app:cardElevation="4dp"
+                app:layout_constraintBottom_toTopOf="@id/periodMoodCV"
+                app:layout_constraintTop_toBottomOf="@id/periodFlowCV">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/symptomsTV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/horizontal_margin"
+                            android:text="@string/symptoms_string"
+                            android:textAppearance="?attr/textAppearanceHeadline6" />
+
+                        <TextView
+                            android:id="@+id/symptomsDetailsTV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/horizontal_margin"
+                            android:text="@string/no_record_string"
+                            android:textAppearance="?attr/textAppearanceBody2" />
+
+                    </LinearLayout>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/addSymptomsBTN"
+                        style="@style/Widget.MaterialComponents.Button.TextButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/add_symptoms_string"
+                        android:onClick="addSymptoms"
+                        app:icon="@drawable/ic_add_entry"
+                        app:iconGravity="textEnd"
+                        app:iconSize="20dp" />
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/periodMoodCV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/vertical_margin"
+                android:clickable="false"
+                app:cardCornerRadius="4dp"
+                app:cardElevation="4dp"
+                app:layout_constraintBottom_toTopOf="@id/periodPredictionCV"
+                app:layout_constraintTop_toBottomOf="@id/periodSymptomsCV">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/moodTV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/horizontal_margin"
+                            android:text="@string/mood_string"
+                            android:textAppearance="?attr/textAppearanceHeadline6" />
+
+                        <androidx.emoji2.widget.EmojiTextView
+                            android:id="@+id/moodEmojiTV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/horizontal_margin"
+                            android:text="@string/no_record_string"
+                            android:textColor="@color/black" />
+
+                    </LinearLayout>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/addMoodBTN"
+                        style="@style/Widget.MaterialComponents.Button.TextButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/add_mood_string"
+                        android:onClick="addMood"
+                        app:icon="@drawable/ic_add_entry"
+                        app:iconGravity="textEnd"
+                        app:iconSize="20dp" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/periodCycleHistoryCV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/vertical_margin"
+                android:clickable="false"
+                android:focusable="true"
+                app:cardCornerRadius="4dp"
+                app:cardElevation="4dp"
+                app:layout_constraintBottom_toTopOf="@id/guideline1"
+                app:layout_constraintTop_toBottomOf="@id/periodPredictionCV">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/periodCycleHistoryTV"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:padding="@dimen/horizontal_margin"
+                            android:text="@string/period_cycle_history_string"
+                            android:textAppearance="?attr/textAppearanceHeadline6" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/cycleHistoryExpandBTN"
+                            style="@style/Widget.MaterialComponents.Button.TextButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:contentDescription="@string/expand_string"
+                            android:onClick="expandAndCollapseCycleHistory"
+                            app:icon="@drawable/ic_baseline_expand_more_24"
+                            app:iconGravity="textEnd"
+                            app:iconSize="20dp" />
+
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/cycleHistoryRV"
+                        android:layout_width="match_parent"
+                        android:layout_height="156dp"
+                        android:layout_marginStart="@dimen/horizontal_margin"
+                        android:layout_marginEnd="@dimen/horizontal_margin"
+                        android:visibility="gone">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/periodPredictionCV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/vertical_margin"
+                android:clickable="false"
+                android:minHeight="48dp"
+                app:cardCornerRadius="4dp"
+                app:cardElevation="4dp"
+                app:layout_constraintBottom_toTopOf="@id/periodCycleHistoryCV"
+                app:layout_constraintTop_toBottomOf="@id/periodMoodCV">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/periodPredictionTV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/horizontal_margin"
+                        android:text="@string/period_prediction_title_string"
+                        android:textAppearance="?attr/textAppearanceHeadline6" />
+
+
+                    <TextView
+                        android:id="@+id/periodPredictionDateTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/horizontal_margin"
+                        android:text="@string/period_prediction_string"
+                        android:textAppearance="?attr/textAppearanceBody2" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.85" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation_view"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_nav_menu" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="../../../../layout/custom_preview.xml" value="0.2146282973621103" />
+        <entry key="..\:/KeepHealthy/app/src/main/res/layout/activity_award.xml" value="0.1" />
+        <entry key="..\:/KeepHealthy/app/src/main/res/layout/activity_breakfast.xml" value="0.20416666666666666" />
+        <entry key="..\:/KeepHealthy/app/src/main/res/layout/activity_cycle_history.xml" value="0.20416666666666666" />
+        <entry key="..\:/KeepHealthy/app/src/main/res/layout/activity_diet.xml" value="0.25" />
+        <entry key="..\:/KeepHealthy/app/src/main/res/layout/activity_dinner.xml" value="0.20416666666666666" />
+        <entry key="..\:/KeepHealthy/app/src/main/res/layout/activity_edit_post.xml" value="0.20416666666666666" />
+        <entry key="..\:/KeepHealthy/app/src/main/res/layout/activity_edit_workout_goal.xml" value="0.20416666666666666" />
+        <entry key="..\:/KeepHealthy/app/src/main/res/layout/activity_health_record.xml" value="0.20416666666666666" />
+        <entry key="..\:/KeepHealthy/app/src/main/res/layout/activity_journey.xml" value="0.20416666666666666" />
+        <entry key="..\:/KeepHealthy/app/src/main/res/layout/activity_lunch.xml" value="0.20416666666666666" />
+        <entry key="..\:/KeepHealthy/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
+        <entry key="..\:/KeepHealthy/app/src/main/res/layout/activity_notification.xml" value="0.20416666666666666" />
+        <entry key="..\:/KeepHealthy/app/src/main/res/layout/activity_period.xml" value="0.20416666666666666" />
+        <entry key="..\:/KeepHealthy/app/src/main/res/layout/activity_profile_page.xml" value="0.20416666666666666" />
+        <entry key="..\:/KeepHealthy/app/src/main/res/layout/activity_register.xml" value="0.20416666666666666" />
+        <entry key="..\:/KeepHealthy/app/src/main/res/layout/activity_settings.xml" value="0.20416666666666666" />
+        <entry key="..\:/KeepHealthy/app/src/main/res/layout/activity_snack.xml" value="0.20416666666666666" />
+        <entry key="..\:/KeepHealthy/app/src/main/res/layout/activity_water.xml" value="0.20416666666666666" />
+        <entry key="..\:/KeepHealthy/app/src/main/res/layout/activity_workout.xml" value="0.20416666666666666" />
+        <entry key="..\:/KeepHealthy/app/src/main/res/layout/app_bar_profile_page.xml" value="0.20416666666666666" />
+        <entry key="..\:/KeepHealthy/app/src/main/res/layout/content_profile_page.xml" value="0.20416666666666666" />
+        <entry key="..\:/KeepHealthy/app/src/main/res/layout/food.xml" value="0.20416666666666666" />
+        <entry key="..\:/KeepHealthy/app/src/main/res/layout/fragment_gallery.xml" value="0.20416666666666666" />
+        <entry key="..\:/KeepHealthy/app/src/main/res/layout/fragment_home.xml" value="0.20416666666666666" />
+        <entry key="..\:/KeepHealthy/app/src/main/res/layout/fragment_slideshow.xml" value="0.20416666666666666" />
+        <entry key="..\:/KeepHealthy/app/src/main/res/layout/item_award_card_grid.xml" value="0.20416666666666666" />
+        <entry key="..\:/KeepHealthy/app/src/main/res/layout/item_award_card_list.xml" value="0.20416666666666666" />
+        <entry key="..\:/KeepHealthy/app/src/main/res/layout/item_calender_cell.xml" value="0.20416666666666666" />
+        <entry key="..\:/KeepHealthy/app/src/main/res/layout/item_cycle_history.xml" value="0.20416666666666666" />
+        <entry key="..\:/KeepHealthy/app/src/main/res/layout/month_year_picker.xml" value="0.20416666666666666" />
+        <entry key="..\:/KeepHealthy/app/src/main/res/layout/nav_header.xml" value="0.20416666666666666" />
+        <entry key="..\:/KeepHealthy/app/src/main/res/layout/nav_header_profile_page.xml" value="0.20416666666666666" />
+        <entry key="..\:/KeepHealthy/app/src/main/res/layout/post_item.xml" value="0.20416666666666666" />
+        <entry key="..\:/KeepHealthy/app/src/main/res/layout/water_intake_item.xml" value="0.20416666666666666" />
+        <entry key="..\:/KeepHealthy/app/src/main/res/menu/activity_main_drawer.xml" value="0.20416666666666666" />
+        <entry key="..\:/KeepHealthy/app/src/main/res/menu/bottom_nav_menu.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/circle_progressbar.xml" value="0.339" />
+        <entry key="app/src/main/res/drawable/circle_progressbar_health_record.xml" value="0.34" />
+        <entry key="app/src/main/res/drawable/circular_background.xml" value="0.117" />
+        <entry key="app/src/main/res/drawable/ic_baseline_photo_camera_24.xml" value="0.118" />
+        <entry key="app/src/main/res/drawable/ic_baseline_star_24.xml" value="0.118" />
+        <entry key="app/src/main/res/drawable/ic_journey2_foreground.xml" value="0.118" />
+        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.117" />
+        <entry key="app/src/main/res/drawable/ic_launcher_healthrecord_logo_foreground.xml" value="0.118" />
+        <entry key="app/src/main/res/drawable/ic_sharp_add_24.xml" value="0.2755" />
+        <entry key="app/src/main/res/drawable/m_customer_border_drawable.xml" value="0.117" />
+        <entry key="app/src/main/res/drawable/m_customer_circle_drawable.xml" value="0.3995" />
+        <entry key="app/src/main/res/drawable/m_customer_circle_gray_drawable.xml" value="0.3805" />
+        <entry key="app/src/main/res/drawable/m_customer_circle_grey_drawable.xml" value="0.3035" />
+        <entry key="app/src/main/res/drawable/m_customer_circle_red_drawable.xml" value="0.4005" />
+        <entry key="app/src/main/res/drawable/text_circle_background.xml" value="0.3995" />
+        <entry key="app/src/main/res/layout/activity_award.xml" value="0.3425786336263021" />
+        <entry key="app/src/main/res/layout/activity_breakfast.xml" value="0.26197916666666665" />
+        <entry key="app/src/main/res/layout/activity_diet.xml" value="0.26197916666666665" />
+        <entry key="app/src/main/res/layout/activity_dinner.xml" value="0.26197916666666665" />
+        <entry key="app/src/main/res/layout/activity_edit_post.xml" value="0.3836050724637681" />
+        <entry key="app/src/main/res/layout/activity_edit_workout_goal.xml" value="0.37585948999377267" />
+        <entry key="app/src/main/res/layout/activity_health_record.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/activity_journey.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_lunch.xml" value="0.26197916666666665" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_notification.xml" value="0.3836050724637681" />
+        <entry key="app/src/main/res/layout/activity_period.xml" value="0.4052757793764988" />
+        <entry key="app/src/main/res/layout/activity_register.xml" value="0.4036458333333333" />
+        <entry key="app/src/main/res/layout/activity_water.xml" value="0.30985915492957744" />
+        <entry key="app/src/main/res/layout/activity_workout.xml" value="0.38632246376811596" />
+        <entry key="app/src/main/res/layout/app_bar_profile_page.xml" value="0.38632246376811596" />
+        <entry key="app/src/main/res/layout/content_profile_page.xml" value="0.38632246376811596" />
+        <entry key="app/src/main/res/layout/food.xml" value="0.2609375" />
+        <entry key="app/src/main/res/layout/item_award_card.xml" value="0.4527777777777778" />
+        <entry key="app/src/main/res/layout/item_award_card_grid.xml" value="0.42183380126953124" />
+        <entry key="app/src/main/res/layout/item_award_card_list.xml" value="0.48564814814814816" />
+        <entry key="app/src/main/res/layout/item_calender_cell.xml" value="0.67" />
+        <entry key="app/src/main/res/layout/item_card_award.xml" value="0.8960695619936343" />
+        <entry key="app/src/main/res/layout/item_cycle_history.xml" value="0.18946894689468946" />
+        <entry key="app/src/main/res/layout/month_year_picker.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/nav_header.xml" value="0.25679347826086957" />
+        <entry key="app/src/main/res/layout/post_item.xml" value="0.10572916666666667" />
+        <entry key="app/src/main/res/menu/activity_main_drawer.xml" value="0.4036458333333333" />
+        <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.40260416666666665" />
+        <entry key="app/src/main/res/menu/profile_menu.xml" value="0.4036458333333333" />
+        <entry key="app/src/main/res/menu/profile_page.xml" value="0.4036458333333333" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_award.xml" value="0.118" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_award_round.xml" value="0.118" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher_logo_round.xml" value="0.118" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.118" />
+        <entry key="app/src/main/res/xml/setting_fragment.xml" value="0.2171875" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.38632246376811596" />
+      </ProjectState>
+    </option>
+  </component>
+</project>

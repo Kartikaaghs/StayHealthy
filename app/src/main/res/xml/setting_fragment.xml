@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+        <PreferenceCategory
+            android:title="Notification Setting">
+
+            <SwitchPreference
+                android:defaultValue="true"
+                android:key="switch_preference_workout"
+                android:title="Work-Out Notification"
+                android:summary="Click to turn the Work-Out Notification OFF"/>
+
+            <SwitchPreference
+                android:defaultValue="true"
+                android:key="switch_preference_water"
+                android:title="Water Notification"
+                android:summary="Click to turn the Water Notification OFF"/>
+
+            <SwitchPreference
+                android:defaultValue="true"
+                android:key="switch_preference_diet"
+                android:title="Diet Notification"
+                android:summary="Click to turn the Diet Notification OFF"/>
+
+            <SwitchPreference
+                android:defaultValue="true"
+                android:key="switch_preference_period"
+                android:title="Period Notification"
+                android:summary="Click to turn the Period Notification OFF"/>
+        </PreferenceCategory>
+
+</PreferenceScreen>
